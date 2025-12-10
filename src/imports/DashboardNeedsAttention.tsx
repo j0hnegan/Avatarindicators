@@ -3078,7 +3078,7 @@ function Component3() {
 
 export default function DashboardNeedsAttention() {
   return (
-    <div className="bg-[#171719] relative size-full" data-name="Dashboard - Needs Attention">
+    <div className="bg-[#171719] relative w-[1440px] min-h-screen" data-name="Dashboard - Needs Attention">
       <div className="absolute h-0 left-[31px] top-[-121px] w-[1121px]">
         <div className="absolute bottom-0 left-0 right-0 top-[-1px]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1121 1">
