@@ -2772,7 +2772,7 @@ function MyTasks() {
 
 function Frame117() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[24px] items-start left-[calc(66.67%+11px)] top-[327px] w-[448px]">
+    <div className="absolute content-stretch flex flex-col gap-[24px] items-start left-[968px] top-[327px] w-[448px]">
       <MyTasks />
     </div>
   );
@@ -3069,7 +3069,7 @@ function Frame128() {
 
 function Component3() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[24px] items-start left-[calc(66.67%+8px)] top-[117px] w-[448px]" data-name="Component 3">
+    <div className="absolute content-stretch flex flex-col gap-[24px] items-start left-[968px] top-[117px] w-[448px]" data-name="Component 3">
       <Frame136 />
       <Frame128 />
     </div>
