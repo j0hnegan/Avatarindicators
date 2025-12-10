@@ -1,11 +1,9 @@
-import { createContext, useContext, useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback } from "react";
 import svgPaths from "./svg-rjk13lumvv";
 import svgPathsCard from "./svg-4ik55nx1tv";
 import svgPathsCardHeader from "./svg-xg6gjeaaib";
 import { ClientCard } from "../components/ClientCard";
 import { Zap } from "lucide-react";
-
-const ScaleContext = createContext(1);
 
 function Button() {
   return (
@@ -3078,23 +3076,21 @@ function Component3() {
   );
 }
 
-export default function DashboardNeedsAttention({ scale = 1 }: { scale?: number }) {
+export default function DashboardNeedsAttention() {
   return (
-    <ScaleContext.Provider value={scale}>
-      <div className="bg-[#171719] relative size-full" data-name="Dashboard - Needs Attention">
-        <div className="absolute h-0 left-[31px] top-[-121px] w-[1121px]">
-          <div className="absolute bottom-0 left-0 right-0 top-[-1px]">
-            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1121 1">
-              <line id="Line 13" stroke="var(--stroke-0, #2C2C2C)" x2="1121" y1="0.5" y2="0.5" />
-            </svg>
-          </div>
+    <div className="bg-[#171719] relative size-full" data-name="Dashboard - Needs Attention">
+      <div className="absolute h-0 left-[31px] top-[-121px] w-[1121px]">
+        <div className="absolute bottom-0 left-0 right-0 top-[-1px]">
+          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1121 1">
+            <line id="Line 13" stroke="var(--stroke-0, #2C2C2C)" x2="1121" y1="0.5" y2="0.5" />
+          </svg>
         </div>
-        <Tasks />
-        <Frame15 />
-        <Frame110 />
-        <Frame117 />
-        <Component3 />
       </div>
-    </ScaleContext.Provider>
+      <Tasks />
+      <Frame15 />
+      <Frame110 />
+      <Frame117 />
+      <Component3 />
+    </div>
   );
 }
