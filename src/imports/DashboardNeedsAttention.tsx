@@ -1,9 +1,8 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState, useRef, useCallback } from "react";
 import svgPaths from "./svg-rjk13lumvv";
 import svgPathsCard from "./svg-4ik55nx1tv";
 import svgPathsCardHeader from "./svg-xg6gjeaaib";
 import { ClientCard } from "../components/ClientCard";
-import { useState } from "react";
 import { Zap } from "lucide-react";
 
 const ScaleContext = createContext(1);
@@ -690,15 +689,32 @@ function HollyCoxCard() {
 
 function Frame16() {
   const [showCard, setShowCard] = useState(false);
+  const hideTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleMouseEnter = useCallback(() => {
+    // Cancel any pending hide timeout
+    if (hideTimeoutRef.current) {
+      clearTimeout(hideTimeoutRef.current);
+      hideTimeoutRef.current = null;
+    }
+    setShowCard(true);
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    // Delay hiding the card to allow time to move to it
+    hideTimeoutRef.current = setTimeout(() => {
+      setShowCard(false);
+    }, 1000); // 1 second delay before hiding
+  }, []);
 
   return (
-    <div 
+    <div
       className="content-stretch flex gap-[10.111px] items-start relative shrink-0"
     >
-      <div 
+      <div
         className="relative shrink-0"
-        onMouseEnter={() => setShowCard(true)}
-        onMouseLeave={() => setShowCard(false)}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
         {/* Pulsing circle around entire avatar - behind everything, 48x48 */}
         <div className="absolute inset-0 rounded-full flex items-center justify-center" style={{ zIndex: 0 }}>
@@ -710,8 +726,8 @@ function Frame16() {
             <img alt="" className="block size-[36px] rounded-full object-cover" src="/assets/9b9d629be6761019d6b90d8bfb972eecb1a0458f.png" />
           </div>
           {/* Static green dot with icon - on top */}
-          <div 
-            className="absolute right-[0px] bottom-[0px] w-[16px] h-[16px] rounded-full flex items-center justify-center" 
+          <div
+            className="absolute right-[0px] bottom-[0px] w-[16px] h-[16px] rounded-full flex items-center justify-center"
             style={{ zIndex: 2, backgroundColor: '#FF2056' }}
           >
             <Zap className="size-[12px] text-white" strokeWidth={2.5} />
@@ -719,10 +735,10 @@ function Frame16() {
         </div>
       </div>
       {showCard && (
-        <div 
+        <div
           className="absolute left-[58px] top-[-120px] z-50"
-          onMouseEnter={() => setShowCard(true)}
-          onMouseLeave={() => setShowCard(false)}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
           <HollyCoxCard />
         </div>
