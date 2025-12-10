@@ -1,7 +1,4 @@
 import svgPaths from "../imports/svg-nhy92oxovn";
-import imgFrame920 from "figma:asset/8fb29c9b39c178de0ad31cdd7dd4862c29a944ba.png";
-import imgImage5 from "figma:asset/5551f2ffc84c48cc9a5dff421ac5238fa2a0fa42.png";
-import imgImage15 from "figma:asset/f1231b9b145fa91c62c5ffd92ed0a9dd8dffdb29.png";
 
 interface Badge {
   type: 'exercise' | 'lifestyle' | 'consult';
@@ -112,7 +109,7 @@ function Frame18() {
   return (
     <div className="bg-black relative rounded-[32px] shrink-0 size-[16px]">
       <div className="absolute aspect-[3840/2160] bottom-[31.25%] left-1/2 top-[31.25%] translate-x-[-50%]" data-name="image 5">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgImage5} />
+        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src="/assets/5551f2ffc84c48cc9a5dff421ac5238fa2a0fa42.png" />
       </div>
     </div>
   );
@@ -122,7 +119,7 @@ function Frame19() {
   return (
     <div className="overflow-clip relative rounded-[14px] shrink-0 size-[16px]">
       <div className="absolute aspect-[512/512] bottom-0 left-1/2 top-0 translate-x-[-50%]" data-name="image 15">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgImage15} />
+        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src="/assets/f1231b9b145fa91c62c5ffd92ed0a9dd8dffdb29.png" />
       </div>
     </div>
   );
