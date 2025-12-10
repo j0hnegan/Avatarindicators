@@ -1,8 +1,4 @@
 import svgPaths from "./svg-4ik55nx1tv";
-import imgFrame920 from "figma:asset/8fb29c9b39c178de0ad31cdd7dd4862c29a944ba.png";
-import imgImage5 from "figma:asset/5551f2ffc84c48cc9a5dff421ac5238fa2a0fa42.png";
-import imgImage15 from "figma:asset/f1231b9b145fa91c62c5ffd92ed0a9dd8dffdb29.png";
-import imgEllipse5 from "figma:asset/14d7f32dbc27f0f1cff81bc0929574d601a16970.png";
 
 function Frame10() {
   return (
@@ -78,7 +74,7 @@ function Frame8() {
     <div className="relative shrink-0 w-full">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0" />
-        <img alt="" className="absolute max-w-none mix-blend-soft-light object-50%-50% object-cover opacity-[0.76] size-full" src={imgFrame920} />
+        <img alt="" className="absolute max-w-none mix-blend-soft-light object-50%-50% object-cover opacity-[0.76] size-full" src="/assets/8fb29c9b39c178de0ad31cdd7dd4862c29a944ba.png" />
       </div>
       <div className="overflow-clip rounded-[inherit] size-full">
         <div className="box-border content-stretch flex flex-col items-start p-[16px] relative w-full">
@@ -94,7 +90,7 @@ function Frame15() {
   return (
     <div className="bg-black relative rounded-[32px] shrink-0 size-[16px]">
       <div className="absolute aspect-[3840/2160] bottom-[31.25%] left-1/2 top-[31.25%] translate-x-[-50%]" data-name="image 5">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgImage5} />
+        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src="/assets/5551f2ffc84c48cc9a5dff421ac5238fa2a0fa42.png" />
       </div>
     </div>
   );
@@ -104,7 +100,7 @@ function Frame16() {
   return (
     <div className="overflow-clip relative rounded-[14px] shrink-0 size-[16px]">
       <div className="absolute aspect-[512/512] bottom-0 left-1/2 top-0 translate-x-[-50%]" data-name="image 15">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgImage15} />
+        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src="/assets/f1231b9b145fa91c62c5ffd92ed0a9dd8dffdb29.png" />
       </div>
     </div>
   );
@@ -329,7 +325,7 @@ function Frame14() {
   return (
     <div className="absolute left-[16px] size-[56px] top-[44px]">
       <div className="absolute left-0 size-[56px] top-0">
-        <img alt="" className="block max-w-none size-full" height="56" src={imgEllipse5} width="56" />
+        <img alt="" className="block max-w-none size-full" height="56" src="/assets/14d7f32dbc27f0f1cff81bc0929574d601a16970.png" width="56" />
       </div>
       <Frame4 />
     </div>

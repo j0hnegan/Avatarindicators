@@ -2,22 +2,6 @@ import { createContext, useContext } from "react";
 import svgPaths from "./svg-rjk13lumvv";
 import svgPathsCard from "./svg-4ik55nx1tv";
 import svgPathsCardHeader from "./svg-xg6gjeaaib";
-import imgEllipse32 from "figma:asset/e26d77c3d6ca4aa4ac07a856b5ce37cfddb76ece.png";
-import imgCoachRxWhite6855787D72E0Da9E54266727C85E549A1 from "figma:asset/8988f58f3d77ccefb92f92d04b4880d9a969c424.png";
-import imgEllipse5 from "figma:asset/9b9d629be6761019d6b90d8bfb972eecb1a0458f.png";
-import imgEllipse6 from "figma:asset/bf320913b5de35f8fa50c7fa2d3c0ba64a1499b2.png";
-import imgEllipse7 from "figma:asset/6e3e44f5677e28e96ab00053c1179a5ca1499732.png";
-import imgImage from "figma:asset/77a8c03f423f62dcde724b6d15346d106e113a7a.png";
-import imgImage1 from "figma:asset/fa703ca86fed7ec9f57678ff27be0a80e8e4b9de.png";
-import imgImage2 from "figma:asset/e29e579b4528597dce0b274f8d620e89802fb569.png";
-import imgImage3 from "figma:asset/6a03c232949ee08ae82efa4e8b8db2d1af1ce007.png";
-import imgImage4 from "figma:asset/ae03c1e28444fe6b4dee2839b0588c3a30652858.png";
-import imgImage5 from "figma:asset/7abaef858f7961852e92af8d4b0ec2bf4f060f3f.png";
-import imgEllipse8 from "figma:asset/267d4cef8aaac3e28a8856190af368113575d720.png";
-import imgFrame849 from "figma:asset/8047d8da77602d019d623a1d3dc6c70928bf0a7c.png";
-import imgFrame920 from "figma:asset/8fb29c9b39c178de0ad31cdd7dd4862c29a944ba.png";
-import imgImage5Card from "figma:asset/5551f2ffc84c48cc9a5dff421ac5238fa2a0fa42.png";
-import imgImage15Card from "figma:asset/f1231b9b145fa91c62c5ffd92ed0a9dd8dffdb29.png";
 import { ClientCard } from "../components/ClientCard";
 import { useState } from "react";
 import { Zap } from "lucide-react";
@@ -383,7 +367,7 @@ function HeaderNav() {
   return (
     <div className="content-stretch flex h-[58px] items-center justify-between relative shrink-0 w-full" data-name="Header Nav">
       <div className="h-[28px] relative shrink-0 w-[110px]" data-name="CoachRx_White-6855787d72e0da9e54266727c85e549a 1">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgCoachRxWhite6855787D72E0Da9E54266727C85E549A1} />
+        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src="/assets/8988f58f3d77ccefb92f92d04b4880d9a969c424.png" />
       </div>
       <Component />
       <Frame44 />
@@ -484,7 +468,7 @@ function HollyCardHeader() {
     <div className="relative h-[72px] shrink-0 w-full">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-[#E12AFB] to-[#FF2056]" />
-        <img alt="" className="absolute max-w-none mix-blend-soft-light object-50%-50% object-cover opacity-[0.76] size-full" src={imgFrame920} />
+        <img alt="" className="absolute max-w-none mix-blend-soft-light object-50%-50% object-cover opacity-[0.76] size-full" src="/assets/8fb29c9b39c178de0ad31cdd7dd4862c29a944ba.png" />
       </div>
       <div className="size-full">
         <div className="box-border content-stretch flex flex-col items-start p-[16px] relative size-full">
@@ -502,12 +486,12 @@ function HollyCardTeamBadge() {
       <div aria-hidden="true" className="absolute border border-[rgba(255,255,255,0.05)] border-solid inset-0 pointer-events-none rounded-[17px]" />
       <div className="bg-black relative rounded-[32px] shrink-0 size-[16px]">
         <div className="absolute aspect-[3840/2160] bottom-[31.25%] left-1/2 top-[31.25%] translate-x-[-50%]">
-          <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgImage5Card} />
+          <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src="/assets/5551f2ffc84c48cc9a5dff421ac5238fa2a0fa42.png" />
         </div>
       </div>
       <div className="overflow-clip relative rounded-[14px] shrink-0 size-[16px]">
         <div className="absolute aspect-[512/512] bottom-0 left-1/2 top-0 translate-x-[-50%]">
-          <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgImage15Card} />
+          <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src="/assets/f1231b9b145fa91c62c5ffd92ed0a9dd8dffdb29.png" />
         </div>
       </div>
     </div>
@@ -684,7 +668,7 @@ function HollyCardAvatar() {
   return (
     <div className="absolute left-[16px] size-[56px] top-[44px]">
       <div className="absolute left-0 size-[56px] top-0">
-        <img alt="" className="block max-w-none size-full" height="56" src={imgEllipse5} width="56" />
+        <img alt="" className="block max-w-none size-full" height="56" src="/assets/9b9d629be6761019d6b90d8bfb972eecb1a0458f.png" width="56" />
       </div>
       <HollyCardAvatarIndicator />
     </div>
@@ -723,7 +707,7 @@ function Frame16() {
         {/* Actual avatar with gradient border */}
         <div className="relative rounded-full w-[48px] h-[48px] flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #E12AFB, #FF2056)', zIndex: 1 }}>
           <div className="rounded-full border-2 border-[#27272A] border-solid w-[42px] h-[42px] flex items-center justify-center bg-[#111113]">
-            <img alt="" className="block size-[36px] rounded-full object-cover" src={imgEllipse5} />
+            <img alt="" className="block size-[36px] rounded-full object-cover" src="/assets/9b9d629be6761019d6b90d8bfb972eecb1a0458f.png" />
           </div>
           {/* Static green dot with icon - on top */}
           <div 
@@ -1029,7 +1013,7 @@ function Frame17() {
     <div className="content-stretch flex gap-[10.111px] items-start relative shrink-0">
       <div className="relative shrink-0 rounded-full border-[3px] border-[#52CBFA] border-solid w-[48px] h-[48px] flex items-center justify-center">
         <div className="rounded-full border-2 border-[#27272A] border-solid w-[40px] h-[40px] flex items-center justify-center">
-          <img alt="" className="block size-[36px] rounded-full" src={imgEllipse6} />
+          <img alt="" className="block size-[36px] rounded-full" src="/assets/bf320913b5de35f8fa50c7fa2d3c0ba64a1499b2.png" />
         </div>
         <div className="absolute bg-[#08F7AD] box-border content-stretch flex flex-col gap-[10px] items-center justify-center overflow-clip px-[5px] py-[8px] rounded-[17px] size-[16px] right-[-2px] bottom-[-2px]">
           <div className="shrink-0 size-[14px]" />
@@ -1735,7 +1719,7 @@ function ImageContainer() {
   return (
     <div className="content-stretch flex flex-col items-center relative shrink-0" data-name="ImageContainer">
       <div className="relative shrink-0 size-[96px]" data-name="Image">
-        <img alt="" className="block max-w-none size-full" height="96" src={imgImage} width="96" />
+        <img alt="" className="block max-w-none size-full" height="96" src="/assets/77a8c03f423f62dcde724b6d15346d106e113a7a.png" width="96" />
       </div>
     </div>
   );
@@ -1764,7 +1748,7 @@ function ImageContainer1() {
   return (
     <div className="content-stretch flex flex-col items-center relative shrink-0" data-name="ImageContainer">
       <div className="relative shrink-0 size-[96px]" data-name="Image">
-        <img alt="" className="block max-w-none size-full" height="96" src={imgImage1} width="96" />
+        <img alt="" className="block max-w-none size-full" height="96" src="/assets/fa703ca86fed7ec9f57678ff27be0a80e8e4b9de.png" width="96" />
       </div>
     </div>
   );
@@ -1807,7 +1791,7 @@ function ImageContainer2() {
   return (
     <div className="content-stretch flex flex-col items-center relative shrink-0" data-name="ImageContainer">
       <div className="relative shrink-0 size-[96px]" data-name="Image">
-        <img alt="" className="block max-w-none size-full" height="96" src={imgImage2} width="96" />
+        <img alt="" className="block max-w-none size-full" height="96" src="/assets/e29e579b4528597dce0b274f8d620e89802fb569.png" width="96" />
       </div>
     </div>
   );
@@ -1836,7 +1820,7 @@ function ImageContainer3() {
   return (
     <div className="content-stretch flex flex-col items-center relative shrink-0" data-name="ImageContainer">
       <div className="relative shrink-0 size-[96px]" data-name="Image">
-        <img alt="" className="block max-w-none size-full" height="96" src={imgImage3} width="96" />
+        <img alt="" className="block max-w-none size-full" height="96" src="/assets/6a03c232949ee08ae82efa4e8b8db2d1af1ce007.png" width="96" />
       </div>
     </div>
   );
@@ -1865,7 +1849,7 @@ function ImageContainer4() {
   return (
     <div className="content-stretch flex flex-col items-center relative shrink-0" data-name="ImageContainer">
       <div className="relative shrink-0 size-[96px]" data-name="Image">
-        <img alt="" className="block max-w-none size-full" height="96" src={imgImage4} width="96" />
+        <img alt="" className="block max-w-none size-full" height="96" src="/assets/ae03c1e28444fe6b4dee2839b0588c3a30652858.png" width="96" />
       </div>
     </div>
   );
@@ -1894,7 +1878,7 @@ function ImageContainer5() {
   return (
     <div className="content-stretch flex flex-col items-center relative shrink-0" data-name="ImageContainer">
       <div className="relative shrink-0 size-[96px]" data-name="Image">
-        <img alt="" className="block max-w-none size-full" height="96" src={imgImage5} width="96" />
+        <img alt="" className="block max-w-none size-full" height="96" src="/assets/7abaef858f7961852e92af8d4b0ec2bf4f060f3f.png" width="96" />
       </div>
     </div>
   );
@@ -2072,7 +2056,7 @@ function Frame19() {
     <div className="content-stretch flex gap-[10.111px] items-start relative shrink-0">
       <div className="relative shrink-0 rounded-full border-[3px] border-[#FFD230] border-solid w-[48px] h-[48px] flex items-center justify-center">
         <div className="rounded-full border-2 border-[#27272A] border-solid w-[40px] h-[40px] flex items-center justify-center">
-          <img alt="" className="block size-[36px] rounded-full" src={imgEllipse8} />
+          <img alt="" className="block size-[36px] rounded-full" src="/assets/267d4cef8aaac3e28a8856190af368113575d720.png" />
         </div>
       </div>
     </div>

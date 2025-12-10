@@ -1,5 +1,4 @@
 import svgPaths from "./svg-xg6gjeaaib";
-import imgFrame920 from "figma:asset/8fb29c9b39c178de0ad31cdd7dd4862c29a944ba.png";
 
 function Frame3() {
   return (
@@ -75,7 +74,7 @@ export default function Frame1() {
     <div className="relative size-full">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0" />
-        <img alt="" className="absolute max-w-none mix-blend-soft-light object-50%-50% object-cover opacity-[0.76] size-full" src={imgFrame920} />
+        <img alt="" className="absolute max-w-none mix-blend-soft-light object-50%-50% object-cover opacity-[0.76] size-full" src="/assets/8fb29c9b39c178de0ad31cdd7dd4862c29a944ba.png" />
       </div>
       <div className="size-full">
         <div className="box-border content-stretch flex flex-col items-start p-[16px] relative size-full">
