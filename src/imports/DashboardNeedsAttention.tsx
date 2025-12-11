@@ -374,7 +374,7 @@ function HeaderNav() {
 
 function Frame15() {
   return (
-    <div className="absolute box-border content-stretch flex flex-col gap-[10px] items-start left-0 px-[24px] py-[11px] top-0 w-[1440px]">
+    <div className="absolute box-border content-stretch flex flex-col gap-[10px] items-start left-0 right-0 px-[24px] py-[11px] top-0">
       <HeaderNav />
     </div>
   );
@@ -2453,7 +2453,7 @@ function Frame100() {
 
 function Frame110() {
   return (
-    <div className="absolute box-border content-stretch flex flex-col gap-[24px] items-end left-[24px] pb-0 pt-[16px] px-0 top-[104px] w-[920px]">
+    <div className="absolute box-border content-stretch flex flex-col gap-[24px] items-end left-[24px] pb-0 pt-[16px] px-0 top-[104px]" style={{ width: 'calc(100% - 520px)' }}>
       <Frame87 />
       <Frame100 />
     </div>
@@ -2772,7 +2772,7 @@ function MyTasks() {
 
 function Frame117() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[24px] items-start top-[327px] w-[448px]" style={{ left: '968px' }}>
+    <div className="absolute content-stretch flex flex-col gap-[24px] items-start top-[327px] right-[24px] w-[448px]">
       <MyTasks />
     </div>
   );
@@ -3069,7 +3069,7 @@ function Frame128() {
 
 function Component3() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[24px] items-start top-[117px] w-[448px]" style={{ left: '968px' }} data-name="Component 3">
+    <div className="absolute content-stretch flex flex-col gap-[24px] items-start top-[117px] right-[24px] w-[448px]" data-name="Component 3">
       <Frame136 />
       <Frame128 />
     </div>
@@ -3078,7 +3078,7 @@ function Component3() {
 
 export default function DashboardNeedsAttention() {
   return (
-    <div className="bg-[#171719] relative" style={{ width: '1440px', minHeight: '900px' }} data-name="Dashboard - Needs Attention">
+    <div className="bg-[#171719] relative w-full min-h-[900px]" data-name="Dashboard - Needs Attention">
       <div className="absolute h-0 left-[31px] top-[-121px] w-[1121px]">
         <div className="absolute bottom-0 left-0 right-0 top-[-1px]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1121 1">
