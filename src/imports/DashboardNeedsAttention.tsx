@@ -2443,7 +2443,7 @@ function Frame132() {
 
 function Frame100() {
   return (
-    <div className="bg-zinc-800 box-border content-stretch flex flex-col gap-[80px] items-start p-[24px] relative rounded-[8px] shrink-0">
+    <div className="bg-zinc-800 box-border content-stretch flex flex-col gap-[80px] items-start p-[24px] relative rounded-[8px] shrink-0 w-full">
       <Frame133 />
       <Frame134 />
       <Frame132 />
@@ -2453,7 +2453,7 @@ function Frame100() {
 
 function Frame110() {
   return (
-    <div className="absolute box-border content-stretch flex flex-col gap-[24px] items-end left-[24px] pb-0 pt-[16px] px-0 top-[104px]" style={{ width: 'calc(100% - 520px)' }}>
+    <div className="absolute box-border content-stretch flex flex-col gap-[24px] items-stretch left-[24px] pb-0 pt-[16px] px-0 top-[104px]" style={{ width: 'calc(100% - 520px)' }}>
       <Frame87 />
       <Frame100 />
     </div>
