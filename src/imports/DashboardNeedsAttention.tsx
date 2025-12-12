@@ -1493,8 +1493,8 @@ function NeedsAttentionItem2() {
 
 function NeedsAttentionTable() {
   return (
-    <div className="absolute left-0 rounded-[18px] top-[110px] w-[872px]" data-name="Needs attention table">
-      <div className="content-stretch flex flex-col items-start overflow-visible relative rounded-[inherit] w-[872px]">
+    <div className="absolute left-0 rounded-[18px] top-[110px] w-full" data-name="Needs attention table">
+      <div className="content-stretch flex flex-col items-start overflow-visible relative rounded-[inherit] w-full">
         <NeedsAttentionItem />
         <NeedsAttentionItem1 />
         <NeedsAttentionItem2 />
@@ -1658,7 +1658,7 @@ function Frame129() {
 
 function Frame131() {
   return (
-    <div className="absolute h-[368px] left-0 top-0 w-[872px]">
+    <div className="absolute h-[368px] left-0 top-0 w-full">
       <NeedsAttentionTable />
       <Frame130 />
       <Frame129 />
@@ -1668,7 +1668,7 @@ function Frame131() {
 
 function Frame133() {
   return (
-    <div className="h-[368px] relative shrink-0 w-[872px]">
+    <div className="h-[368px] relative shrink-0 w-full">
       <Frame131 />
     </div>
   );
@@ -1717,7 +1717,7 @@ function Frame118() {
 
 function Frame86() {
   return (
-    <div className="absolute h-[54px] left-0 top-0 w-[548px]">
+    <div className="absolute h-[54px] left-0 top-0 mt-[24px] w-[548px]">
       <p className="absolute font-['Mona_Sans:SemiBold',sans-serif] font-semibold leading-[1.43] left-0 not-italic text-[0px] text-[20px] text-nowrap text-white top-0 tracking-[-0.25px] whitespace-pre" style={{ fontVariationSettings: "'wdth' 100" }}>
         <span>{`Touchpoints `}</span>
         <span className="font-['Mona_Sans:Regular',sans-serif] font-normal" style={{ fontVariationSettings: "'wdth' 100" }}>
@@ -1934,7 +1934,7 @@ function Frame84() {
 
 function Frame85() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[24px] items-start left-[24px] overflow-clip top-[24px] w-[872px]">
+    <div className="absolute content-stretch flex flex-col gap-[24px] items-start left-[24px] overflow-clip top-[24px] w-full">
       <Frame84 />
     </div>
   );
@@ -1942,7 +1942,7 @@ function Frame85() {
 
 function Frame78() {
   return (
-    <div className="absolute h-[178px] left-0 rounded-[8px] top-[62px] w-[872px]">
+    <div className="absolute h-[178px] left-0 mt-[24px] rounded-[8px] top-[62px] w-full">
       <Frame85 />
     </div>
   );
@@ -1971,7 +1971,7 @@ function Button3() {
 
 function Touchpoints() {
   return (
-    <div className="h-[240px] relative shrink-0 w-[872px]" data-name="Touchpoints">
+    <div className="h-[240px] relative shrink-0 w-full" data-name="Touchpoints">
       <Frame86 />
       <Frame78 />
       <Button3 />
@@ -2415,7 +2415,7 @@ function Frame93() {
 
 function Frame95() {
   return (
-    <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-[872px]">
+    <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full">
       <Frame96 />
       <Frame93 />
     </div>
@@ -2424,7 +2424,7 @@ function Frame95() {
 
 function Sorting1() {
   return (
-    <div className="bg-[#343434] box-border content-stretch flex gap-[4px] items-center justify-center px-[8px] py-[12px] relative rounded-[12px] shrink-0 w-[872px]" data-name="Sorting">
+    <div className="bg-[#343434] box-border content-stretch flex gap-[4px] items-center justify-center px-[8px] py-[12px] relative rounded-[12px] shrink-0 w-full" data-name="Sorting">
       <p className="font-['Mona_Sans:Medium',sans-serif] font-medium leading-[1.43] not-italic relative shrink-0 text-[16px] text-nowrap text-white tracking-[-0.25px] whitespace-pre" style={{ fontVariationSettings: "'wdth' 100" }}>
         View older updates
       </p>
@@ -2434,7 +2434,7 @@ function Sorting1() {
 
 function Frame132() {
   return (
-    <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0">
+    <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full">
       <Frame95 />
       <Sorting1 />
     </div>
@@ -2443,7 +2443,7 @@ function Frame132() {
 
 function Frame100() {
   return (
-    <div className="bg-zinc-800 box-border content-stretch flex flex-col gap-[80px] items-start p-[24px] relative rounded-[8px] shrink-0 w-full">
+    <div className="bg-zinc-800 box-border content-stretch flex flex-col gap-[80px] items-start overflow-hidden p-[24px] relative rounded-[8px] shrink-0 w-full">
       <Frame133 />
       <Frame134 />
       <Frame132 />
