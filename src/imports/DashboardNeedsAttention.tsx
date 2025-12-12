@@ -2499,7 +2499,11 @@ function Frame110() {
 
 function Button4() {
   return (
-    <div className="bg-[#3db2e0] box-border content-stretch flex gap-[6px] items-center justify-center pl-[6px] pr-[10px] py-[4px] relative rounded-[8px] shrink-0 w-fit h-fit" data-name="Button">
+    <div
+      className="bg-[#3db2e0] box-border content-stretch flex gap-[6px] items-center justify-center w-fit relative rounded-[8px] shrink-0 h-fit"
+      style={{ padding: "4px 8px 4px 6px", width: "fit-content", height: "fit-content" }}
+      data-name="Button"
+    >
       <div className="relative shrink-0 size-[18px] text-white">
         <svg className="block size-full" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
           <path
