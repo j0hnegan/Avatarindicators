@@ -639,7 +639,7 @@ function HollyCardAvatarIndicator() {
   
   return (
     <div 
-      className="absolute bg-[#ff2056] box-border content-stretch flex flex-col gap-[10px] items-center justify-center left-[40px] overflow-clip px-[5px] py-[8px] rounded-[17px] size-[16px] top-[40px] cursor-pointer"
+      className="absolute bg-[#ff2056] box-border content-stretch flex flex-col gap-[10px] items-center justify-center left-[40px] overflow-visible px-[5px] py-[8px] rounded-[17px] size-[16px] top-[40px] cursor-pointer"
       onMouseEnter={() => setShowTooltip(true)}
       onMouseLeave={() => setShowTooltip(false)}
     >
@@ -649,12 +649,26 @@ function HollyCardAvatarIndicator() {
         </svg>
       </div>
       {showTooltip && (
-        <div 
-          className="absolute bottom-[20px] left-1/2 transform -translate-x-1/2 bg-[#27272A] text-white text-[12px] px-[8px] py-[4px] rounded-[4px] whitespace-nowrap pointer-events-none shadow-lg"
-          style={{ zIndex: 1000 }}
+        <div
+          className="absolute left-1/2 transform -translate-x-1/2 text-white text-[12px] whitespace-nowrap pointer-events-none"
+          style={{
+            zIndex: 9999,
+            bottom: "calc(100% + 8px)",
+            backgroundColor: "#232325",
+            padding: "2px 6px",
+            borderRadius: "6px",
+          }}
         >
           Working out now
-          <div className="absolute top-[-4px] left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-b-[4px] border-b-[#27272A]" />
+          <div
+            className="absolute left-1/2 transform -translate-x-1/2 w-0 h-0"
+            style={{
+              bottom: "-4px",
+              borderLeft: "4px solid transparent",
+              borderRight: "4px solid transparent",
+              borderTop: "4px solid #232325",
+            }}
+          />
         </div>
       )}
     </div>
@@ -675,7 +689,7 @@ function HollyCardAvatar() {
 function HollyCoxCard() {
   return (
     <div className="bg-[#2f2f32] relative rounded-[6px] w-[276px]">
-      <div className="content-stretch flex flex-col items-start overflow-clip relative rounded-[inherit] size-full">
+      <div className="content-stretch flex flex-col items-start overflow-visible relative rounded-[inherit] size-full">
         <HollyCardHeader />
         <HollyCardContent />
         <HollyCardAvatar />
@@ -686,7 +700,8 @@ function HollyCoxCard() {
 }
 
 function Frame16() {
-  const [showCard, setShowCard] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [shouldRender, setShouldRender] = useState(false);
   const hideTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const handleMouseEnter = useCallback(() => {
@@ -695,14 +710,18 @@ function Frame16() {
       clearTimeout(hideTimeoutRef.current);
       hideTimeoutRef.current = null;
     }
-    setShowCard(true);
+    setShouldRender(true);
+    // Small delay to ensure render before animation
+    requestAnimationFrame(() => setIsVisible(true));
   }, []);
 
   const handleMouseLeave = useCallback(() => {
     // Delay hiding the card to allow time to move to it
     hideTimeoutRef.current = setTimeout(() => {
-      setShowCard(false);
-    }, 1000); // 1 second delay before hiding
+      setIsVisible(false);
+      // Wait for fade animation to complete before unmounting
+      setTimeout(() => setShouldRender(false), 200);
+    }, 500); // 0.5 second delay before hiding
   }, []);
 
   return (
@@ -723,7 +742,7 @@ function Frame16() {
           <div className="rounded-full border-2 border-[#27272A] border-solid w-[42px] h-[42px] flex items-center justify-center bg-[#111113]">
             <img alt="" className="block size-[36px] rounded-full object-cover" src="/assets/9b9d629be6761019d6b90d8bfb972eecb1a0458f.png" />
           </div>
-          {/* Static green dot with icon - on top */}
+          {/* Static indicator dot with icon - on top */}
           <div
             className="absolute right-[0px] bottom-[0px] w-[16px] h-[16px] rounded-full flex items-center justify-center"
             style={{ zIndex: 2, backgroundColor: '#FF2056' }}
@@ -732,9 +751,10 @@ function Frame16() {
           </div>
         </div>
       </div>
-      {showCard && (
+      {shouldRender && (
         <div
-          className="absolute left-[58px] top-[-120px] z-50"
+          className="absolute left-[58px] top-[-120px] z-50 transition-opacity duration-200"
+          style={{ opacity: isVisible ? 1 : 0 }}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >

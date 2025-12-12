@@ -1,4 +1,6 @@
 import svgPaths from "../imports/svg-nhy92oxovn";
+import { Zap } from "lucide-react";
+import { Tooltip, TooltipTrigger, TooltipContent } from "./ui/tooltip";
 
 interface Badge {
   type: 'exercise' | 'lifestyle' | 'consult';
@@ -258,9 +260,20 @@ function Frame8({ name, completedSessions, badges }: { name: string; completedSe
 
 function Frame5() {
   return (
-    <div className="absolute bg-[#73e292] box-border content-stretch flex flex-col gap-[10px] items-center justify-center left-[40px] overflow-clip px-[5px] py-[8px] rounded-[17px] size-[16px] top-[40px]" data-name="Frame">
-      <div className="shrink-0 size-[14px]" data-name="icon" />
-    </div>
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <div className="absolute bg-[#73e292] box-border content-stretch flex flex-col gap-[10px] items-center justify-center left-[40px] overflow-clip px-[5px] py-[8px] rounded-[17px] size-[16px] top-[40px] cursor-pointer" data-name="Frame">
+          <Zap className="shrink-0 size-[10px] text-[#036345]" strokeWidth={2.5} />
+        </div>
+      </TooltipTrigger>
+      <TooltipContent 
+        side="top" 
+        sideOffset={4}
+        className="bg-[#000] text-white p-[2px] rounded-[4px] text-xs"
+      >
+        Working out now
+      </TooltipContent>
+    </Tooltip>
   );
 }
 
