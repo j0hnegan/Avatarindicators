@@ -450,12 +450,29 @@ function HollyCardIcon3Wrapper() {
   );
 }
 
+function HollyCardIcon4() {
+  return (
+    <div className="backdrop-blur-[1.5px] backdrop-filter bg-[rgba(255,255,255,0.2)] overflow-clip relative rounded-[20px] shrink-0 size-[24px] text-white" data-name="Frame">
+      <div className="absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] size-[16px]">
+        <svg className="block size-full text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+          />
+        </svg>
+      </div>
+    </div>
+  );
+}
+
 function HollyCardHeaderIcons() {
   return (
     <div className="absolute content-stretch flex gap-[5px] items-start justify-end right-[12px] top-[calc(50%-8px)] translate-y-[-50%]">
       <HollyCardIcon1 />
       <HollyCardIcon2 />
       <HollyCardIcon3Wrapper />
+      <HollyCardIcon4 />
     </div>
   );
 }
@@ -2482,7 +2499,16 @@ function Frame110() {
 
 function Button4() {
   return (
-    <div className="bg-[#3db2e0] box-border content-stretch flex gap-[4px] items-center justify-center px-[8px] py-[4px] relative rounded-[8px] shrink-0" data-name="Button">
+    <div className="bg-[#3db2e0] box-border content-stretch flex gap-[6px] items-center justify-center pl-[6px] pr-[10px] py-[4px] relative rounded-[8px] shrink-0 w-fit h-fit" data-name="Button">
+      <div className="relative shrink-0 size-[18px] text-white">
+        <svg className="block size-full" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+          />
+        </svg>
+      </div>
       <p className="font-['Mona_Sans:Medium',sans-serif] font-medium leading-[1.43] not-italic relative shrink-0 text-[16px] text-nowrap text-white tracking-[-0.25px] whitespace-pre" style={{ fontVariationSettings: "'wdth' 100" }}>
         Add Task
       </p>
