@@ -2090,6 +2090,12 @@
 
 html {
   font-size: var(--font-size);
+  background-color: #171719;
+}
+
+body {
+  background-color: #171719;
+  min-height: 100%;
 }
 
 @keyframes heartbeat {

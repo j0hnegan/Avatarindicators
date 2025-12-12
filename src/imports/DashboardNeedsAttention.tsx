@@ -1,11 +1,9 @@
-import { createContext, useContext, useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback } from "react";
 import svgPaths from "./svg-rjk13lumvv";
 import svgPathsCard from "./svg-4ik55nx1tv";
 import svgPathsCardHeader from "./svg-xg6gjeaaib";
 import { ClientCard } from "../components/ClientCard";
 import { Zap } from "lucide-react";
-
-const ScaleContext = createContext(1);
 
 function Button() {
   return (
@@ -376,7 +374,7 @@ function HeaderNav() {
 
 function Frame15() {
   return (
-    <div className="absolute box-border content-stretch flex flex-col gap-[10px] items-start left-0 px-[24px] py-[11px] top-0 w-[1440px]">
+    <div className="absolute box-border content-stretch flex flex-col gap-[10px] items-start left-0 right-0 px-[24px] py-[11px] top-0">
       <HeaderNav />
     </div>
   );
@@ -2445,7 +2443,7 @@ function Frame132() {
 
 function Frame100() {
   return (
-    <div className="bg-zinc-800 box-border content-stretch flex flex-col gap-[80px] items-start p-[24px] relative rounded-[8px] shrink-0">
+    <div className="bg-zinc-800 box-border content-stretch flex flex-col gap-[80px] items-start p-[24px] relative rounded-[8px] shrink-0 w-full">
       <Frame133 />
       <Frame134 />
       <Frame132 />
@@ -2455,7 +2453,7 @@ function Frame100() {
 
 function Frame110() {
   return (
-    <div className="absolute box-border content-stretch flex flex-col gap-[24px] items-end left-[24px] pb-0 pt-[16px] px-0 top-[104px] w-[920px]">
+    <div className="absolute box-border content-stretch flex flex-col gap-[24px] items-stretch left-[24px] pb-0 pt-[16px] px-0 top-[104px]" style={{ width: 'calc(100% - 520px)' }}>
       <Frame87 />
       <Frame100 />
     </div>
@@ -2774,7 +2772,7 @@ function MyTasks() {
 
 function Frame117() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[24px] items-start left-[calc(66.67%+11px)] top-[327px] w-[448px]">
+    <div className="absolute content-stretch flex flex-col gap-[24px] items-start top-[327px] w-[448px]" style={{ right: '24px' }}>
       <MyTasks />
     </div>
   );
@@ -3071,30 +3069,28 @@ function Frame128() {
 
 function Component3() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[24px] items-start left-[calc(66.67%+8px)] top-[117px] w-[448px]" data-name="Component 3">
+    <div className="absolute content-stretch flex flex-col gap-[24px] items-start top-[117px] w-[448px]" style={{ right: '24px' }} data-name="Component 3">
       <Frame136 />
       <Frame128 />
     </div>
   );
 }
 
-export default function DashboardNeedsAttention({ scale = 1 }: { scale?: number }) {
+export default function DashboardNeedsAttention() {
   return (
-    <ScaleContext.Provider value={scale}>
-      <div className="bg-[#171719] relative size-full" data-name="Dashboard - Needs Attention">
-        <div className="absolute h-0 left-[31px] top-[-121px] w-[1121px]">
-          <div className="absolute bottom-0 left-0 right-0 top-[-1px]">
-            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1121 1">
-              <line id="Line 13" stroke="var(--stroke-0, #2C2C2C)" x2="1121" y1="0.5" y2="0.5" />
-            </svg>
-          </div>
+    <div className="bg-[#171719] relative w-full min-w-[1024px] min-h-[900px]" data-name="Dashboard - Needs Attention">
+      <div className="absolute h-0 left-[31px] top-[-121px] w-[1121px]">
+        <div className="absolute bottom-0 left-0 right-0 top-[-1px]">
+          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1121 1">
+            <line id="Line 13" stroke="var(--stroke-0, #2C2C2C)" x2="1121" y1="0.5" y2="0.5" />
+          </svg>
         </div>
-        <Tasks />
-        <Frame15 />
-        <Frame110 />
-        <Frame117 />
-        <Component3 />
       </div>
-    </ScaleContext.Provider>
+      <Tasks />
+      <Frame15 />
+      <Frame110 />
+      <Frame117 />
+      <Component3 />
+    </div>
   );
 }
