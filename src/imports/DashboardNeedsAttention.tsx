@@ -1919,7 +1919,7 @@ function Client8() {
 
 function Frame84() {
   return (
-    <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full">
+    <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-fit">
       <Client3 />
       <Client4 />
       <Client5 />
@@ -1934,7 +1934,7 @@ function Frame84() {
 
 function Frame85() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[24px] items-start left-[24px] overflow-clip top-[24px] w-full">
+    <div className="absolute content-stretch flex flex-col gap-[24px] items-start left-0 overflow-clip top-[24px] w-fit">
       <Frame84 />
     </div>
   );
@@ -1963,7 +1963,7 @@ function Frame13() {
 
 function Button3() {
   return (
-    <div className="absolute bg-[#343434] box-border content-stretch flex gap-[4px] items-center justify-center px-[8px] py-[4px] right-0 rounded-[8px] top-0" data-name="Button">
+    <div className="absolute bg-[#343434] box-border content-stretch flex gap-[4px] items-center justify-center px-[8px] py-[4px] right-0 rounded-[8px] top-[24px]" data-name="Button">
       <Frame13 />
     </div>
   );
@@ -1981,7 +1981,7 @@ function Touchpoints() {
 
 function Frame134() {
   return (
-    <div className="content-stretch flex flex-col gap-[10px] items-start relative shrink-0">
+    <div className="content-stretch flex flex-col gap-[10px] items-start relative shrink-0 w-full">
       <Touchpoints />
     </div>
   );
